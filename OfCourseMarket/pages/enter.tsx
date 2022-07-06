@@ -10,7 +10,7 @@ export default function Enter() {
 	const onPhoneClick = () => setMethod("phone");
 	return (
 		<div className="px-4 mt-16">
-			<h3 className="text-3xl font-bold text-center">Enter to Blueberry</h3>
+			<h3 className="text-3xl font-bold text-center">Enter to BlueBerry</h3>
 			<div className="mt-8">
 				<div className="flex flex-col items-center">
 					<h5 className="text-sm font-medium text-gray-500">Enter using:</h5>
