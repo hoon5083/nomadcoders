@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function cls(...classnames: string[]) {
+function TabSelect(...classnames: string[]) {
 	return classnames.join(" ");
 }
 
@@ -10,16 +10,16 @@ export default function Enter() {
 	const onPhoneClick = () => setMethod("phone");
 	return (
 		<div className="px-4 mt-16">
-			<h3 className="text-3xl font-bold text-center">Enter to Carrot</h3>
+			<h3 className="text-3xl font-bold text-center">Enter to Blueberry</h3>
 			<div className="mt-8">
 				<div className="flex flex-col items-center">
 					<h5 className="text-sm font-medium text-gray-500">Enter using:</h5>
 					<div className="grid w-full grid-cols-2 gap-16 mt-8 border-b">
 						<button
-							className={cls(
+							className={TabSelect(
 								"pb-4 font-medium border-b-2",
 								method === "email"
-									? "text-orange-400 border-orange-500"
+									? "text-indigo-400 bordet-indigo-500"
 									: "border-transparent"
 							)}
 							onClick={onEmailClick}
@@ -27,10 +27,10 @@ export default function Enter() {
 							Email
 						</button>
 						<button
-							className={cls(
+							className={TabSelect(
 								"pb-4 font-medium border-b-2",
 								method === "phone"
-									? "text-orange-400 border-orange-500"
+									? "text-indigo-400 border-indigo-500"
 									: "border-transparent text-gray-500"
 							)}
 							onClick={onPhoneClick}
@@ -48,7 +48,7 @@ export default function Enter() {
 						{method === "email" ? (
 							<input
 								type="email"
-								className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm appearance-none placeholderbg-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+								className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm appearance-none placeholderbg-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
 								required
 							/>
 						) : null}
@@ -59,13 +59,13 @@ export default function Enter() {
 								</span>
 								<input
 									type="number"
-									className="w-full px-3 py-2 border border-gray-300 rounded-md rounded-l-none shadow-sm appearance-none placeholderbg-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+									className="w-full px-3 py-2 border border-gray-300 rounded-md rounded-l-none shadow-sm appearance-none placeholderbg-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
 									required
 								/>
 							</div>
 						) : null}
 					</div>
-					<button className="px-4 py-2 mt-5 font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">
+					<button className="px-4 py-2 mt-5 font-medium text-white bg-indigo-500 border border-transparent rounded-md shadow-sm hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:outline-none">
 						{method === "email" ? "Get login link" : null}
 						{method === "phone" ? "Get one-time password" : null}
 					</button>
