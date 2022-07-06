@@ -5,7 +5,7 @@ const ItemDetail: NextPage = () => {
 		<div className="px-4 py-10">
 			<div className="mb-8">
 				<div className="bg-slate-300 h-96" />
-				<div className="flex items-center py-3 space-x-3 border-b cursor-pointer bordet-t">
+				<div className="flex items-center py-3 space-x-3 border-t border-b cursor-pointer">
 					<div className="w-12 h-12 rounded-full bg-slate-300" />
 					<div>
 						<p className="text-sm font-medium text-gray-700">Steve Jebs</p>
