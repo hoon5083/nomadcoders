@@ -1,16 +1,28 @@
-.box {
+.child {
 	background: blue;
 	width: 200px;
 	height: 200px;
 	color: white;
 }
 
-.wrapper {
+.parent {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	/* main axis */
 	justify-content: space-around;
-	/* cross axis */
-	align-items: flex-end;
 	height: 100vh;
+}
+
+.child:nth-child(1) {
+	order: 2;
+}
+
+.child:nth-child(2) {
+	align-self: center;
+	order: 3;
+}
+
+.child:nth-child(3) {
+	align-self: flex-end;
+	order: 0;
 }
